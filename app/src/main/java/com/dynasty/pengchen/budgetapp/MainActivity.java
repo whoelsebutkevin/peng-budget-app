@@ -38,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int id) {
                         // FIRE ZE MISSILES!
                         mBank.deposit(1);
-                        textView2.setText(String.format("%f", mBank.getmBalance()));
+                        textView2.setText(mBank.getBalance());
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // User cancelled the dialog
                         mBank.deposit(-1);
-                        textView2.setText(String.format("%f", mBank.getmBalance()));
+                        textView2.setText(mBank.getBalance());
                     }
                 });
         builder.show();

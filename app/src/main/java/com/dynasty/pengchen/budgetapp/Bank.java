@@ -1,17 +1,20 @@
 package com.dynasty.pengchen.budgetapp;
 
+
+import java.math.BigDecimal;
+
 public class Bank {
-    private double mBalance;
+    private BigDecimal mBalance;
 
     public Bank() {
-        this.mBalance = 0;
+        mBalance = new BigDecimal(0);
     }
 
     public void deposit(double amount) {
-        this.mBalance += amount;
+        this.mBalance = this.mBalance.add(new BigDecimal(amount));
     }
 
-    public double getmBalance() {
-        return this.mBalance;
+    public String getBalance() {
+        return this.mBalance.toString();
     }
 }
